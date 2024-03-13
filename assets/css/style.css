@@ -1,26 +1,20 @@
-/**
-* Template Name: Medicio
-* Updated: Jan 29 2024 with Bootstrap v5.3.2
-* Template URL: https://bootstrapmade.com/medicio-free-bootstrap-theme/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
+:root {
+  --primary: #2f5bca;
+  --primary-hover: #2449a5;
+}
 
-/*--------------------------------------------------------------
-# General
---------------------------------------------------------------*/
 body {
   font-family: "Open Sans", sans-serif;
   color: #444444;
 }
 
 a {
-  color: #4a63a3;
+  color: var(--primary);
   text-decoration: none;
 }
 
 a:hover {
-  color: #65c9cd;
+  color: var(--primary-hover);
   text-decoration: none;
 }
 
@@ -52,7 +46,7 @@ h6 {
   position: fixed;
   top: calc(50% - 30px);
   left: calc(50% - 30px);
-  border: 6px solid #4a63a3;
+  border: 6px solid var(--primary);
   border-top-color: #ecf8f9;
   border-radius: 50%;
   width: 60px;
@@ -80,7 +74,7 @@ h6 {
   right: 15px;
   bottom: 15px;
   z-index: 996;
-  background: #4a63a3;
+  background: var(--primary);
   width: 40px;
   height: 40px;
   border-radius: 4px;
@@ -94,7 +88,7 @@ h6 {
 }
 
 .back-to-top:hover {
-  background: #5ec6ca;
+  background: var(--primary-hover);
   color: #fff;
 }
 
@@ -116,7 +110,7 @@ h6 {
 # Top Bar
 --------------------------------------------------------------*/
 #topbar {
-  background: #4a63a3;
+  background: var(--primary);
   color: #fff;
   height: 40px;
   font-size: 16px;
@@ -179,7 +173,7 @@ h6 {
 */
 .appointment-btn {
   margin-left: 25px;
-  background: #4a63a3;
+  background: var(--primary);
   color: #fff;
   border-radius: 4px;
   padding: 8px 25px;
@@ -190,7 +184,7 @@ h6 {
 }
 
 .appointment-btn:hover {
-  background: #65c9cd;
+  background: var(--primary-hover);
   color: #fff;
 }
 
@@ -249,7 +243,7 @@ h6 {
 .navbar .active,
 .navbar .active:focus,
 .navbar li:hover>a {
-  color: #4a63a3;
+  color: var(--primary);
 }
 
 .navbar .dropdown ul {
@@ -284,7 +278,7 @@ h6 {
 .navbar .dropdown ul a:hover,
 .navbar .dropdown ul .active:hover,
 .navbar .dropdown ul li:hover>a {
-  color: #4a63a3;
+  color: var(--primary);
 }
 
 .navbar .dropdown:hover>ul {
@@ -384,7 +378,7 @@ h6 {
 .navbar-mobile a:hover,
 .navbar-mobile .active,
 .navbar-mobile li:hover>a {
-  color: #4a63a3;
+  color: var(--primary);
 }
 
 .navbar-mobile .dropdown ul {
@@ -414,7 +408,7 @@ h6 {
 .navbar-mobile .dropdown ul a:hover,
 .navbar-mobile .dropdown ul .active:hover,
 .navbar-mobile .dropdown ul li:hover>a {
-  color: #4a63a3;
+  color: var(--primary);
 }
 
 .navbar-mobile .dropdown>.dropdown-active {
@@ -458,7 +452,7 @@ h6 {
   padding-top: 30px;
   padding-bottom: 30px;
   margin-bottom: 50px;
-  border-top: 4px solid #4a63a3;
+  border-top: 4px solid var(--primary);
 }
 
 @media (max-width: 1200px) {
@@ -526,7 +520,7 @@ h6 {
 
 #hero .carousel-control-next-icon:hover,
 #hero .carousel-control-prev-icon:hover {
-  background: #4a63a3;
+  background: var(--primary);
   color: rgba(255, 255, 255, 0.8);
 }
 
@@ -545,7 +539,7 @@ h6 {
 
 #hero .carousel-indicators li.active {
   opacity: 1;
-  background: #4a63a3;
+  background: var(--primary);
 }
 
 #hero .btn-get-started {
@@ -559,11 +553,11 @@ h6 {
   transition: 0.5s;
   line-height: 1;
   color: #fff;
-  background: #4a63a3;
+  background: var(--primary);
 }
 
 #hero .btn-get-started:hover {
-  background: #65c9cd;
+  background: var(--primary-hover);
 }
 
 @media (max-width: 992px) {
@@ -628,7 +622,7 @@ section {
   display: block;
   width: 50px;
   height: 3px;
-  background: #4a63a3;
+  background: var(--primary);
   bottom: 0;
   left: calc(50% - 25px);
 }
@@ -726,7 +720,7 @@ section {
 }
 
 .featured-services .icon-box:hover::before {
-  background: #4a63a3;
+  background: var(--primary);
   top: 0;
   border-radius: 0px;
 }
@@ -738,7 +732,7 @@ section {
 .featured-services .icon i {
   font-size: 48px;
   line-height: 1;
-  color: #4a63a3;
+  color: var(--primary);
   transition: all 0.3s ease-in-out;
 }
 
@@ -771,7 +765,7 @@ section {
 # Cta
 --------------------------------------------------------------*/
 .cta {
-  background: #4a63a3;
+  background: var(--primary);
   color: #fff;
   background-size: cover;
   padding: 60px 0;
@@ -798,7 +792,7 @@ section {
 
 .cta .cta-btn:hover {
   background: #fff;
-  color: #4a63a3;
+  color: var(--primary);
 }
 
 /*--------------------------------------------------------------
@@ -821,7 +815,7 @@ section {
 .about .content ul i {
   font-size: 20px;
   padding-right: 4px;
-  color: #4a63a3;
+  color: var(--primary);
 }
 
 .about .content p:last-child {
@@ -844,7 +838,7 @@ section {
 .counts .count-box i {
   display: block;
   font-size: 30px;
-  color: #4a63a3;
+  color: var(--primary);
   float: left;
 }
 
@@ -875,7 +869,7 @@ section {
 }
 
 .counts .count-box a:hover {
-  color: #4a63a3;
+  color: var(--primary);
 }
 
 /*--------------------------------------------------------------
@@ -890,7 +884,7 @@ section {
 .features .icon-box i {
   font-size: 48px;
   float: left;
-  color: #4a63a3;
+  color: var(--primary);
 }
 
 .features .icon-box p {
@@ -924,7 +918,7 @@ section {
   background: #fff;
   border-radius: 50%;
   transition: 0.5s;
-  color: #4a63a3;
+  color: var(--primary);
   overflow: hidden;
   box-shadow: 0px 0 25px rgba(0, 0, 0, 0.15);
 }
@@ -952,7 +946,7 @@ section {
 }
 
 .services .title a:hover {
-  color: #4a63a3;
+  color: var(--primary);
 }
 
 .services .title::after {
@@ -961,7 +955,7 @@ section {
   display: block;
   width: 50px;
   height: 2px;
-  background: #4a63a3;
+  background: var(--primary);
   bottom: 0;
   left: calc(50% - 25px);
 }
@@ -1043,7 +1037,7 @@ section {
 .appointment .php-email-form input:focus,
 .appointment .php-email-form textarea:focus,
 .appointment .php-email-form select:focus {
-  border-color: #4a63a3;
+  border-color: var(--primary);
 }
 
 .appointment .php-email-form input,
@@ -1056,7 +1050,7 @@ section {
 }
 
 .appointment .php-email-form button[type=submit] {
-  background: #4a63a3;
+  background: var(--primary);
   border: 0;
   padding: 10px 35px;
   color: #fff;
@@ -1065,7 +1059,7 @@ section {
 }
 
 .appointment .php-email-form button[type=submit]:hover {
-  background: #52c2c6;
+  background: var(--primary-hover);
 }
 
 /*--------------------------------------------------------------
@@ -1096,16 +1090,16 @@ section {
 }
 
 .departments .nav-link:hover h4 {
-  color: #4a63a3;
+  color: var(--primary);
 }
 
 .departments .nav-link.active {
   background: #f7fcfc;
-  border-color: #4a63a3;
+  border-color: var(--primary);
 }
 
 .departments .nav-link.active h4 {
-  color: #4a63a3;
+  color: var(--primary);
 }
 
 .departments .tab-pane.active {
@@ -1130,7 +1124,7 @@ section {
   font-size: 26px;
   font-weight: 600;
   margin-bottom: 20px;
-  color: #4a63a3;
+  color: var(--primary);
 }
 
 .departments .tab-pane p {
@@ -1226,11 +1220,11 @@ section {
   height: 12px;
   background-color: #fff;
   opacity: 1;
-  border: 1px solid #4a63a3;
+  border: 1px solid var(--primary);
 }
 
 .testimonials .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: #4a63a3;
+  background-color: var(--primary);
 }
 
 /*--------------------------------------------------------------
@@ -1278,7 +1272,7 @@ section {
 }
 
 .doctors .member .social a:hover {
-  color: #4a63a3;
+  color: var(--primary);
 }
 
 .doctors .member .social i {
@@ -1332,11 +1326,11 @@ section {
   height: 12px;
   background-color: #fff;
   opacity: 1;
-  border: 1px solid #4a63a3;
+  border: 1px solid var(--primary);
 }
 
 .gallery .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: #4a63a3;
+  background-color: var(--primary);
 }
 
 .gallery .swiper-slide-active {
@@ -1349,7 +1343,7 @@ section {
   }
 
   .gallery .swiper-slide-active {
-    border: 6px solid #4a63a3;
+    border: 6px solid var(--primary);
     padding: 4px;
     background: #fff;
     z-index: 1;
@@ -1383,7 +1377,7 @@ section {
 
 .pricing h4 {
   font-size: 36px;
-  color: #4a63a3;
+  color: var(--primary);
   font-weight: 600;
   font-family: "Poppins", sans-serif;
   margin-bottom: 20px;
@@ -1415,7 +1409,7 @@ section {
 }
 
 .pricing ul i {
-  color: #4a63a3;
+  color: var(--primary);
   font-size: 18px;
   padding-right: 4px;
 }
@@ -1433,7 +1427,7 @@ section {
 }
 
 .pricing .btn-buy {
-  background: #4a63a3;
+  background: var(--primary);
   display: inline-block;
   padding: 8px 35px 10px 35px;
   border-radius: 4px;
@@ -1447,12 +1441,12 @@ section {
 }
 
 .pricing .btn-buy:hover {
-  background: #65c9cd;
+  background: var(--primary-hover);
 }
 
 .pricing .featured h3 {
   color: #fff;
-  background: #4a63a3;
+  background: var(--primary);
 }
 
 .pricing .advanced {
@@ -1464,7 +1458,7 @@ section {
   z-index: 1;
   font-size: 14px;
   padding: 1px 0 3px 0;
-  background: #4a63a3;
+  background: var(--primary);
   color: #fff;
 }
 
@@ -1489,7 +1483,7 @@ section {
 .faq .faq-list .question {
   display: block;
   position: relative;
-  font-family: #4a63a3;
+  font-family: var(--primary);
   font-size: 18px;
   line-height: 24px;
   font-weight: 400;
@@ -1520,7 +1514,7 @@ section {
 }
 
 .faq .faq-list .collapsed:hover {
-  color: #4a63a3;
+  color: var(--primary);
 }
 
 .faq .faq-list .collapsed .icon-show {
@@ -1545,7 +1539,7 @@ section {
 
 .contact .info-box i {
   font-size: 32px;
-  color: #4a63a3;
+  color: var(--primary);
   border-radius: 50%;
   padding: 8px;
   border: 2px dotted #c5ebec;
@@ -1620,7 +1614,7 @@ section {
 
 .contact .php-email-form input:focus,
 .contact .php-email-form textarea:focus {
-  border-color: #4a63a3;
+  border-color: var(--primary);
 }
 
 .contact .php-email-form input {
@@ -1632,7 +1626,7 @@ section {
 }
 
 .contact .php-email-form button[type=submit] {
-  background: #4a63a3;
+  background: var(--primary);
   border: 0;
   padding: 10px 30px;
   color: #fff;
@@ -1641,7 +1635,7 @@ section {
 }
 
 .contact .php-email-form button[type=submit]:hover {
-  background: #65c9cd;
+  background: var(--primary-hover);
 }
 
 @keyframes animate-loading {
@@ -1691,7 +1685,7 @@ section {
 #footer .footer-top .social-links a {
   font-size: 18px;
   display: inline-block;
-  background: #4a63a3;
+  background: var(--primary);
   color: #fff;
   line-height: 1;
   padding: 8px 0;
@@ -1704,7 +1698,7 @@ section {
 }
 
 #footer .footer-top .social-links a:hover {
-  background: #65c9cd;
+  background: var(--primary-hover);
   text-decoration: none;
 }
 
@@ -1727,7 +1721,7 @@ section {
 
 #footer .footer-top .footer-links ul i {
   padding-right: 2px;
-  color: #4a63a3;
+  color: var(--primary);
   font-size: 18px;
   line-height: 1;
 }
@@ -1750,7 +1744,7 @@ section {
 }
 
 #footer .footer-top .footer-links ul a:hover {
-  color: #4a63a3;
+  color: var(--primary);
 }
 
 #footer .footer-top .footer-newsletter form {
@@ -1777,14 +1771,14 @@ section {
   background: none;
   font-size: 16px;
   padding: 0 20px;
-  background: #4a63a3;
+  background: var(--primary);
   color: #fff;
   transition: 0.3s;
   border-radius: 0 4px 4px 0;
 }
 
 #footer .footer-top .footer-newsletter form input[type=submit]:hover {
-  background: #65c9cd;
+  background: var(--primary-hover);
 }
 
 #footer .copyright {
