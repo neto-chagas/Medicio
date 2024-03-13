@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Registro na Clínica Médica</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <!-- Inputmask Plugin -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.6/jquery.inputmask.min.js"></script>
+
+  <!-- JavaScript for Form Validation and Masking -->
+  <script>
+    $(document).ready(function () {
+      // Máscara para o campo de telefone
+      $('#telefone').inputmask('(99) 99999-9999');
+
+      // Máscara para o campo de CPF
+      $('#cpf').inputmask('999.999.999-99', {
+        numericInput: true,
+      });
+
+      // Validação do formulário
+      $('#registrationForm').submit(function (event) {
+        var nome = $('#nome').val();
+        var email = $('#email').val();
+        var telefone = $('#telefone').val();
+        var cpf = $('#cpf').val();
+
+        // Validar se os campos estão preenchidos
+        if (!nome || !email || !telefone || !cpf) {
+          alert('Por favor, preencha todos os campos.');
+          event.preventDefault();
+          return;
+        }
+
+        // Validar formato do e-mail
+        var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+          alert('Por favor, insira um endereço de e-mail válido.');
+          event.preventDefault();
+          return;
+        }
+
+        // Validar se o CPF possui 11 dígitos
+        if (cpf.replace(/\D/g, '').length !== 11) {
+          alert('Por favor, insira um CPF válido.');
+          event.preventDefault();
+          return;
+        }
+
+        // Outras validações podem ser adicionadas conforme necessário
+
+        // Se todas as validações passarem, o formulário será enviado
+      });
+    });
+  </script>
+</head>
+
+<body>
+
+  <!-- ======= Top Bar ======= -->
+  <div id="topbar" class="d-flex align-items-center fixed-top">
+    <div class="container d-flex align-items-center justify-content-center justify-content-md-between">
+      <div class="align-items-center d-none d-md-flex">
+        <i class="bi bi-clock"></i> Segunda-Feira - Sexta-Feira, 8AM a 10PM
+      </div>
+      <div class="d-flex align-items-center">
+        <i class="bi bi-phone"></i> nos ligue agora! +55 (18)99661-3741
+      </div>
+    </div>
+  </div>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center">
+
+      <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt=""></a>
+
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+          <li><a class="nav-link scrollto" href="#hero">Inicio</a></li>
+          <li><a class="nav-link scrollto" href="#about">Sobre</a></li>
+          <li><a class="nav-link scrollto" href="#services">Serviços</a></li>
+          <li><a class="nav-link scrollto" href="#departments">Departmentos</a></li>
+          <li><a class="nav-link scrollto" href="#doctors">Doutores</a></li>
+          <li><a class="nav-link scrollto" href="#contact">Contato</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav>
+
+      <a href="#appointment" class="appointment-btn scrollto"><span class="d-none d-md-inline">Entrar</span></a>
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- Formulário de Registro -->
+  <section id="registration" class="py-5">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <form id="registrationForm" action="processar_registro.php" method="post">
+
+            <div class="mb-3">
+              <label for="nome" class="form-label">Nome</label>
+              <input type="text" class="form-control" id="nome" name="nome" required>
+            </div>
+
+            <div class="mb-3">
+              <label for="email" class="form-label">E-mail</label>
+              <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+
+            <div class="mb-3">
+              <label for="telefone" class="form-label">Telefone</label>
+              <input type="tel" class="form-control" id="telefone" name="telefone" required>
+            </div>
+
+            <div class="mb-3">
+              <label for="cpf" class="form-label">CPF</label>
+              <input type="text" class="form-control" id="cpf" name="cpf" required>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Registrar</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Adicione aqui os outros componentes da sua página, como a barra superior, rodapé, etc. -->
+
+  <!-- Adicione o seu script Bootstrap e outros scripts aqui -->
+
+</body>
+
+</html>
