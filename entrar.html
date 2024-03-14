@@ -14,7 +14,9 @@
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
@@ -33,12 +35,10 @@
   <script>
     $(document).ready(function () {
       // Máscara para o campo de telefone
-      $('#telefone').inputmask('(99) 99999-9999');
+      $('#telefone').inputmask('(99) 99999-9999', { jitMasking: true });
 
       // Máscara para o campo de CPF
-      $('#cpf').inputmask('999.999.999-99', {
-        numericInput: true,
-      });
+      $('#cpf').inputmask('999.999.999-99', { numericInput: true, jitMasking: true });
 
       // Validação do formulário
       $('#registrationForm').submit(function (event) {
@@ -115,29 +115,29 @@
   </header><!-- End Header -->
 
   <!-- Formulário de Registro -->
-  <section id="registration" class="py-5">
-    <div class="container">
+  <section id="registration" class="mt-5">
+    <div class="container pt-5">
       <div class="row justify-content-center">
         <div class="col-md-6">
           <form id="registrationForm" action="processar_registro.php" method="post">
 
             <div class="mb-3">
-              <label for="nome" class="form-label">Nome</label>
+              <label for="nome" class="form-label">Nome *</label>
               <input type="text" class="form-control" id="nome" name="nome" required>
             </div>
 
             <div class="mb-3">
-              <label for="email" class="form-label">E-mail</label>
+              <label for="email" class="form-label">E-mail *</label>
               <input type="email" class="form-control" id="email" name="email" required>
             </div>
 
             <div class="mb-3">
-              <label for="telefone" class="form-label">Telefone</label>
+              <label for="telefone" class="form-label">Telefone *</label>
               <input type="tel" class="form-control" id="telefone" name="telefone" required>
             </div>
 
             <div class="mb-3">
-              <label for="cpf" class="form-label">CPF</label>
+              <label for="cpf" class="form-label">CPF *</label>
               <input type="text" class="form-control" id="cpf" name="cpf" required>
             </div>
 
