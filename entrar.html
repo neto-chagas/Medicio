@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
 
@@ -14,19 +15,12 @@
 
     <!-- Google Fonts -->
     <link
-      href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
-      rel="stylesheet"
-    />
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet" />
 
     <!-- Vendor CSS Files -->
-    <link
-      href="assets/vendor/fontawesome-free/css/all.min.css"
-      rel="stylesheet"
-    />
-    <link
-      href="assets/vendor/bootstrap/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
+    <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" />
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
 
     <!-- Template Main CSS File -->
     <link href="assets/css/template.css" rel="stylesheet" />
@@ -38,80 +32,52 @@
     <!-- Inputmask Plugin -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.6/jquery.inputmask.min.js"></script>
     <script src="assets/js/login.js"></script>
-  </head>
+</head>
 
-  <body>
+<body>
     <!-- ======= Header ======= -->
     <header id="header" class="fixed-top header-scrolled">
-      <div class="container d-flex align-items-center">
-        <h1 class="logo me-auto"><a href="index.html">Clínica Viva Bem</a></h1>
-      </div>
+        <div class="container d-flex align-items-center">
+            <h1 class="logo me-auto"><a href="index.html">Clínica Viva Bem</a></h1>
+        </div>
     </header>
     <!-- End Header -->
 
     <!-- Formulário de Registro -->
     <section id="registration" class="mt-5">
-      <div class="container pt-5">
-        <div class="row justify-content-center">
-          <div class="col-md-6">
-            <form id="registrationForm">
-              <div class="mb-3">
-                <label for="nome" class="form-label">Nome <span class="required-marker">*</span></label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="nome"
-                  name="nome"
-                  placeholder="Nome completo"
-                  required
-                />
-              </div>
+        <div class="container pt-1">
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <form id="registrationForm">
+                        <div class="mb-3">
+                            <label for="email" class="form-label">E-mail <span class="required-marker">*</span></label>
+                            <input type="email" class="form-control" id="email" name="email"
+                                placeholder="E-Mail (exemplo@email.com)" required />
+                        </div>
 
-              <div class="mb-3">
-                <label for="email" class="form-label">E-mail <span class="required-marker">*</span></label>
-                <input
-                  type="email"
-                  class="form-control"
-                  id="email"
-                  name="email"
-                  placeholder="E-Mail (exemplo@email.com)"
-                  required
-                />
-              </div>
+                        <div class="mb-3">
+                            <label for="senha" class="form-label">Senha <span class="required-marker">*</span></label>
+                            <input type="password" class="form-control" id="senha" name="senha" placeholder="Senha"
+                                required />
+                        </div>
 
-              <div class="mb-3">
-                <label for="telefone" class="form-label">Telefone <span class="required-marker">*</span></label>
-                <input
-                  type="tel"
-                  class="form-control"
-                  id="telefone"
-                  name="telefone"
-                  placeholder="Celular (+99 99 99999-9999)"
-                  required
-                />
-              </div>
+                        <div class="mb-1 d-flex justify-content-center">
+                            <button type="submit" class="login-btn px-5 fw-bold">Entrar</button>
+                        </div>
 
-              <div class="mb-3">
-                <label for="cpf" class="form-label">CPF <span class="required-marker">*</span></label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="cpf"
-                  name="cpf"
-                  placeholder="CPF (999.999.999-99)"
-                  required
-                />
-              </div>
-
-              <button type="submit" class="login-btn">Registrar</button>
-            </form>
-          </div>
+                        <div class="has-login d-flex justify-content-center">
+                            <span>Não tem uma conta?&nbsp;&nbsp;</span>
+                            <a href="./registrar.html" class="text-decoration-underline">Criar uma conta</a>
+                          </div>
+                    </form>
+                </div>
+            </div>
         </div>
-      </div>
     </section>
 
     <!-- Adicione aqui os outros componentes da sua página, como a barra superior, rodapé, etc. -->
 
     <!-- Adicione o seu script Bootstrap e outros scripts aqui -->
-  </body>
+</body>
+
 </html>

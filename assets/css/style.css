@@ -6,3 +6,8 @@
   opacity: 0.8;
   font-size: 0.725rem;
 }
+
+.has-login {
+  font-size: 13px;
+  color: #444444;
+}
