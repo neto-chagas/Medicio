@@ -1,0 +1,5 @@
+.form-control-required label::after {
+  font-size: 0.725rem;
+  margin-left: 4px;
+  content: "*";
+}
