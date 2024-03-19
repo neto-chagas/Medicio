@@ -1,5 +1,10 @@
-.form-control-required label::after {
+.form-required label::after {
   font-size: 0.725rem;
   margin-left: 4px;
   content: "*";
+}
+
+.control label {
+  font-weight: 600;
+  transition: all 150ms ease-in;
 }
