@@ -1,6 +1,6 @@
 $(() => {
-  // Máscara para o campo de telefone
-  $("#telefone").inputmask("(+99) 99999-9999", {
+  // Máscara para o campo de Celular
+  $("#Celular").inputmask("(+99) 99999-9999", {
     showMaskOnHover: false,
     jitMasking: true,
   });
@@ -18,11 +18,11 @@ $(() => {
 
     const nome = $("#nome").val();
     const email = $("#email").val();
-    const telefone = $("#telefone").val();
+    const Celular = $("#Celular").val();
     const cpf = $("#cpf").val();
 
     // Validar se os campos estão preenchidos
-    if (!nome || !email || !telefone || !cpf) {
+    if (!nome || !email || !Celular || !cpf) {
       alert("Por favor, preencha todos os campos.");
       return;
     }

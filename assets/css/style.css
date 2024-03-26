@@ -11,3 +11,22 @@
   font-size: 13px;
   color: #444444;
 }
+
+#registrationForm,
+#loginForm {
+  display: grid !important;
+  row-gap: 1.5rem;
+  column-gap: 2rem;
+}
+
+@media (min-width: 768px) {
+
+  #registrationForm {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  #registrationForm :is(#submit-container,
+    #has-login-container) {
+    grid-column: 1 / 3;
+  }
+}
