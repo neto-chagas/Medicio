@@ -13,8 +13,16 @@ $(() => {
   });
 
   // Validação do formulário
-  $("#registrationForm").submit((event) => {
+  const form = $("#registrationForm");
+
+  validateForm(form);
+
+  form.submit((event) => {
     event.preventDefault();
+
+    const valid = form.valid();
+
+    console.log({ result, valid });
 
     const nome = $("#nome").val();
     const email = $("#email").val();
@@ -23,20 +31,17 @@ $(() => {
 
     // Validar se os campos estão preenchidos
     if (!nome || !email || !Celular || !cpf) {
-      alert("Por favor, preencha todos os campos.");
       return;
     }
 
     // Validar formato do e-mail
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
-      alert("Por favor, insira um endereço de e-mail válido.");
       return;
     }
 
     // Validar se o CPF possui 11 dígitos
     if (cpf.replace(/\D/g, "").length !== 11) {
-      alert("Por favor, insira um CPF válido.");
       return;
     }
 
