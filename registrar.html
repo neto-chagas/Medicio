@@ -28,14 +28,17 @@
 
   <!-- jQuery -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
 
   <!-- Inputmask Plugin -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.6/jquery.inputmask.min.js"></script>
-  <script src="assets/js/login.js"></script>
-
+  
   <!-- Componentes -->
   <link rel="stylesheet" href="components/components.css" />
   <script type="module" src="components/components.mjs"></script>
+
+  <script src="assets/js/login.js"></script>
+  <script src="assets/js/form.js"></script>
 </head>
 
 <body>
@@ -54,35 +57,35 @@
 
       <div class="row justify-content-center">
         <div class="col-md-8">
-          <form id="registrationForm" class="justify-items-center">
-            <div class="control control-outlined form-required">
+          <form id="registrationForm" class="justify-items-center" novalidate>
+            <div class="control form-required">
               <label for="nome" class="form-label">Nome</label>
               <input type="text" class="form-control" id="nome" name="nome" placeholder="Nome completo" required />
             </div>
 
-            <div class="control control-outlined form-required">
+            <div class="control form-required">
               <label for="Celular" class="form-label">Celular</label>
               <input type="tel" class="form-control" id="Celular" name="Celular" placeholder="+99 99 99999-9999"
                 required />
             </div>
 
-            <div class="control control-outlined form-required">
+            <div class="control form-required">
               <label for="cpf" class="form-label">CPF</label>
               <input type="text" class="form-control" id="cpf" name="cpf" placeholder="999.999.999-99" required />
             </div>
 
-            <div class="control control-outlined form-required">
+            <div class="control form-required">
               <label for="email" class="form-label">E-mail</label>
               <input type="email" class="form-control" id="email" name="email" placeholder="exemplo@email.com"
                 required />
             </div>
 
-            <div class="control control-outlined form-required">
-              <label for="senha" class="form-label">Senha</label>
-              <input type="password" class="form-control" id="senha" name="senha" placeholder="Senha" required />
+            <div class="control form-required">
+              <label for="criarSenha" class="form-label">Senha</label>
+              <input type="password" class="form-control" id="criarSenha" name="criarSenha" placeholder="Senha" required />
             </div>
             
-            <div class="control control-outlined form-required">
+            <div class="control form-required">
               <label for="confirmar-senha" class="form-label">Confirmar Senha</label>
               <input type="password" class="form-control" id="confirmar-senha" name="confirmar-senha" placeholder="Confirmar Senha" required />
             </div>
@@ -106,6 +109,9 @@
   <!-- Adicione aqui os outros componentes da sua página, como a barra superior, rodapé, etc. -->
 
   <!-- Adicione o seu script Bootstrap e outros scripts aqui -->
+  <script>
+    ValidateForm("registrationForm");
+  </script>
 </body>
 
 </html>
