@@ -29,10 +29,11 @@
   <!-- jQuery -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
+  <script src="assets/js/fakeApi.js"></script>
 
   <!-- Inputmask Plugin -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.6/jquery.inputmask.min.js"></script>
-  
+
   <!-- Componentes -->
   <link rel="stylesheet" href="components/components.css" />
   <script type="module" src="components/components.mjs"></script>
@@ -57,7 +58,7 @@
 
       <div class="row justify-content-center">
         <div class="col-md-8">
-          <form id="registrationForm" class="justify-items-center" novalidate>
+          <form id="registrationForm" class="justify-items-center">
             <div class="control form-required">
               <label for="nome" class="form-label">Nome</label>
               <input type="text" class="form-control" id="nome" name="nome" placeholder="Nome completo" required />
@@ -81,13 +82,15 @@
             </div>
 
             <div class="control form-required">
-              <label for="criarSenha" class="form-label">Senha</label>
-              <input type="password" class="form-control" id="criarSenha" name="criarSenha" placeholder="Senha" required />
+              <label for="senha" class="form-label">Senha</label>
+              <input type="password" class="form-control" id="senha" name="senha" placeholder="Senha" required
+                minlength="8" match="#senha,Senha" />
             </div>
-            
+
             <div class="control form-required">
               <label for="confirmar-senha" class="form-label">Confirmar Senha</label>
-              <input type="password" class="form-control" id="confirmar-senha" name="confirmar-senha" placeholder="Confirmar Senha" required />
+              <input type="password" class="form-control" id="confirmar-senha" name="confirmar-senha"
+                placeholder="Confirmar Senha" required />
             </div>
 
             <div id="submit-container" class="mb-1 d-flex justify-content-center">
@@ -110,7 +113,13 @@
 
   <!-- Adicione o seu script Bootstrap e outros scripts aqui -->
   <script>
-    ValidateForm("registrationForm");
+    ValidateForm("registrationForm", () => {
+      fakeApi.hello();
+      fakeApi.hello();
+      fakeApi.hello();
+      fakeApi.hello();
+      location.href = '/entrar.html';
+    });
   </script>
 </body>
 
